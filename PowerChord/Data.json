@@ -1,0 +1,98 @@
+[
+    {
+        "id": "0",
+        "key": "A",
+        "notes": ["A", "Bm", "Dbm", "D", "E", "Gbm", "Abdim"],
+        "majorScale": ["A", "B", "Db", "D", "E", "Gb", "Ab"],
+        "pentatonicScale": ["A", "B", "Db", "E", "Gb"],
+        "bluesScale": ["A", "B", "C", "Db", "E", "Gb"]
+    },
+    {
+        "id": "1",
+        "key": "Bb",
+        "notes": ["Bb", "Cm", "Dm", "Eb", "F", "Gm", "Adim"],
+        "majorScale": ["Bb", "C", "D", "Eb", "F", "G", "A"],
+        "pentatonicScale": ["Bb", "C", "D", "F", "G"],
+        "bluesScale": ["Bb", "C", "Db", "D", "F", "G"]
+    },
+    {
+        "id": "2",
+        "key": "B",
+        "notes": ["B", "Dbm", "Ebm", "E", "Gb", "Abm", "Bbdim"],
+        "majorScale": ["B", "Db", "Eb", "E", "Gb", "Ab", "Bb"],
+        "pentatonicScale": ["B", "Db", "Eb", "Gb", "Ab"],
+        "bluesScale": ["B", "Db", "D", "Eb", "Gb", "Ab"]
+    },
+    {
+        "id": "3",
+        "key": "C",
+        "notes": ["C", "Dm", "Em", "F", "G", "Am", "Bdim"],
+        "majorScale": ["C", "D", "E", "F", "G", "A", "B"],
+        "pentatonicScale": ["C", "D", "E", "G", "A"],
+        "bluesScale": ["C", "D", "Eb", "E", "G", "A"]
+    },
+    {
+        "id": "4",
+        "key": "Db",
+        "notes": ["Db", "Ebm", "Fm", "Gb", "Ab", "Bbm", "Cdim"],
+        "majorScale": ["Db", "Eb", "F", "Gb", "Ab", "Bb", "C"],
+        "pentatonicScale": ["Db", "Eb", "F", "Ab", "Bb"],
+        "bluesScale": ["Db", "Eb", "E", "F", "Ab", "Bb"]
+    },
+    {
+        "id": "5",
+        "key": "D",
+        "notes": ["D", "Em", "Gbm", "G", "A", "Bm", "Dbdim"],
+        "majorScale": ["D", "E", "Gb", "G", "A", "B", "Db"],
+        "pentatonicScale": ["D", "E", "Gb", "A", "B"],
+        "bluesScale": ["D", "E", "F", "Gb", "A", "B"]
+    },
+    {
+        "id": "6",
+        "key": "Eb",
+        "notes": ["Eb", "Fm", "Gm", "Ab", "Bb", "Cm", "Ddim"],
+        "majorScale": ["Eb", "F", "G", "Ab", "Bb", "C", "D"],
+        "pentatonicScale": ["Eb", "F", "G", "Bb", "C"],
+        "bluesScale": ["Eb", "F", "Gb", "G", "Bb", "C"]
+    },
+    {
+        "id": "7",
+        "key": "E",
+        "notes": ["E", "Gbm", "Abm", "A", "C", "Dbm", "Ebdim"],
+        "majorScale": ["E", "Gb", "Ab", "A", "C", "Db", "Eb"],
+        "pentatonicScale": ["E", "Gb", "Ab", "C", "Db"],
+        "bluesScale": ["E", "Gb", "G", "Ab", "B", "Db"]
+    },
+    {
+        "id": "8",
+        "key": "F",
+        "notes": ["F", "Gm", "Am", "Bb", "Db", "Dm", "Edim"],
+        "majorScale": ["F", "G", "A", "Bb", "Db", "D", "E"],
+        "pentatonicScale": ["F", "G", "A", "Db", "D"],
+        "bluesScale": ["F", "G", "Ab", "A", "C", "D"]
+    },
+    {
+        "id": "9",
+        "key": "Gb",
+        "notes": ["Gb", "Abm", "Bbm", "C", "D", "Ebm", "Fdim"],
+        "majorScale": ["Gb", "Ab", "Bb", "C", "D", "Eb", "F"],
+        "pentatonicScale": ["Gb", "Ab", "Bb", "D", "Eb"],
+        "bluesScale": ["Gb", "Ab", "A", "Bb", "Db", "Eb"]
+    },
+    {
+        "id": "10",
+        "key": "G",
+        "notes": ["G", "Am", "Cm", "Db", "Eb", "Fm", "Abdim"],
+        "majorScale": ["G", "A", "C", "Db", "Eb", "F", "Ab"],
+        "pentatonicScale": ["G", "A", "C", "Eb", "F"],
+        "bluesScale": ["G", "A", "Bb", "B", "D", "E"]
+    },
+    {
+        "id": "11",
+        "key": "Ab",
+        "notes": ["Ab", "Bbm", "Dbm", "D", "F", "Gbm", "Adim"],
+        "majorScale": ["Ab", "Bb", "Db", "D", "F", "Gb", "A"],
+        "pentatonicScale": ["Ab", "Bb", "Db", "F", "Gb"],
+        "bluesScale": ["Ab", "Bb", "B", "C", "Eb", "F"]
+    }
+]
