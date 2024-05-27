@@ -23,3 +23,13 @@ struct Chord: Hashable, Identifiable, Codable {
         self.id = UUID().uuidString
     }
 }
+
+func getChordFromKey(src: Array<Chord>, key: String) -> Chord? {
+    for chord in src {
+        if (chord.key == key) {
+            return chord
+        }
+    }
+    print("getChordFromKey(): chord \(key) doesn't in given src chords list.")
+    return nil
+}

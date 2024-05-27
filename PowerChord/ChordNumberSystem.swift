@@ -30,20 +30,15 @@ struct ChordNumberSystem: View {
                         }
                     } label: {
                         MainRectangleElement(key:self.chord.key)
-                            .padding(.trailing, 30)
+                            .padding(.trailing, 20)
                     }
-                    Menu {
-                        Picker(selection: $chord, label: EmptyView()) {
-                            ForEach(self.allChord, id: \.self) { item in
-                                Text(item.key).tag(item as Chord?)
-                            }
-                        }
+                    NavigationLink {
+                        SignatureSelection(chord: $chord, allChord: allChord)
                     } label: {
                         Signature(key: self.chord.key)
                     }
                 }
-                .padding(.bottom, 40)
-                .padding(.top, 40)
+                .padding(20)
                 HStack {
                     RectangleElement(key:"1", note: chord.notes[0])
                     RectangleElement(key:"2(m)", note: chord.notes[1])

@@ -18,14 +18,13 @@ struct Signature: View {
         VStack {
             Text("Signature")
                 .foregroundStyle(colorScheme == .dark ? .white : Color.black)
-                .font(.system(size: 37))
+                .font(.system(size: 30))
                 .fontWeight(.bold)
-                .kerning(1.2)
+                .kerning(0.9)
                 .padding(.bottom, 0.1)
             Image(key)
                 .padding(.top, 0.1)
                 .clipShape(.rect(cornerRadius: 10))
-                .padding(.trailing, 100)
         }
     }
 }
