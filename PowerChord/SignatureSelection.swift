@@ -7,9 +7,35 @@
 
 import SwiftUI
 
+struct SignatureSelectionElement: View {
+    @Environment(\.presentationMode) var presentationMode
+    
+    @Binding var chord: Chord
+    private let allChord: Array<Chord>
+    var key: String
+
+    init(chord: Binding<Chord>, allChord: Array<Chord>, key: String) {
+        _chord = chord
+        self.allChord = allChord
+        self.key = key
+    }
+    
+    var body: some View {
+        Button {
+            chord = getChordFromKey(src: allChord, key: self.key) ?? chord
+            self.presentationMode.wrappedValue.dismiss()
+        } label: {
+            Image(self.key)
+                .resizable()
+                .clipShape(.rect(cornerRadius: 10))
+                .frame(width: 100, height: 100)
+                .padding(10)
+        }
+    }
+}
+
 struct SignatureSelection: View {
     @Environment(\.colorScheme) var colorScheme
-    @Environment(\.presentationMode) var presentationMode
     @Binding var chord: Chord
     
     private let allChord: Array<Chord>
@@ -19,92 +45,37 @@ struct SignatureSelection: View {
         self.allChord = allChord
     }
     var body: some View {
-        NavigationView {
-            VStack {
-                Text("Signature")
-                    .foregroundStyle(colorScheme == .dark ? .white : Color.black)
-                    .font(.system(size: 37))
-                    .fontWeight(.bold)
-                    .kerning(1.2)
-                    .padding(.bottom, 0.1)
-                HStack {
-                    Button {
-                        chord = getChordFromKey(src: allChord, key: "C") ?? chord
-                        self.presentationMode.wrappedValue.dismiss()
-                    } label: {
-                        Image("C")
-                            .resizable()
-                            .clipShape(.rect(cornerRadius: 10))
-                            .frame(width: 100, height: 100)
-                            .padding(10)
-                    }
-                    Image("Db")
-                        .resizable()
-                        .clipShape(.rect(cornerRadius: 10))
-                        .frame(width: 100, height: 100)
-                        .padding(10)
-                    Image("D")
-                        .resizable()
-                        .clipShape(.rect(cornerRadius: 10))
-                        .frame(width: 100, height: 100)
-                        .padding(10)
-                }
-                .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-                HStack {
-                    Image("Eb")
-                        .resizable()
-                        .clipShape(.rect(cornerRadius: 10))
-                        .frame(width: 100, height: 100)
-                        .padding(10)
-                    Image("E")
-                        .resizable()
-                        .clipShape(.rect(cornerRadius: 10))
-                        .frame(width: 100, height: 100)
-                        .padding(10)
-                    Image("F")
-                        .resizable()
-                        .clipShape(.rect(cornerRadius: 10))
-                        .frame(width: 100, height: 100)
-                        .padding(10)
-                }
-                .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-                HStack {
-                    Image("Gb")
-                        .resizable()
-                        .clipShape(.rect(cornerRadius: 10))
-                        .frame(width: 100, height: 100)
-                        .padding(10)
-                    Image("G")
-                        .resizable()
-                        .clipShape(.rect(cornerRadius: 10))
-                        .frame(width: 100, height: 100)
-                        .padding(10)
-                    Image("Ab")
-                        .resizable()
-                        .clipShape(.rect(cornerRadius: 10))
-                        .frame(width: 100, height: 100)
-                        .padding(10)
-                }
-                .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-                HStack {
-                    Image("A")
-                        .resizable()
-                        .clipShape(.rect(cornerRadius: 10))
-                        .frame(width: 100, height: 100)
-                        .padding(10)
-                    Image("Bb")
-                        .resizable()
-                        .clipShape(.rect(cornerRadius: 10))
-                        .frame(width: 100, height: 100)
-                        .padding(10)
-                    Image("B")
-                        .resizable()
-                        .clipShape(.rect(cornerRadius: 10))
-                        .frame(width: 100, height: 100)
-                        .padding(10)
-                }
-                .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text("Signature")
+                .foregroundStyle(colorScheme == .dark ? .white : Color.black)
+                .font(.system(size: 37))
+                .fontWeight(.bold)
+                .kerning(1.2)
+                .padding(.bottom, 0.1)
+            HStack {
+                SignatureSelectionElement(chord: $chord, allChord: self.allChord, key: "C")
+                SignatureSelectionElement(chord: $chord, allChord: self.allChord, key: "Db")
+                SignatureSelectionElement(chord: $chord, allChord: self.allChord, key: "D")
             }
+            .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+            HStack {
+                SignatureSelectionElement(chord: $chord, allChord: self.allChord, key: "Eb")
+                SignatureSelectionElement(chord: $chord, allChord: self.allChord, key: "E")
+                SignatureSelectionElement(chord: $chord, allChord: self.allChord, key: "F")
+            }
+            .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+            HStack {
+                SignatureSelectionElement(chord: $chord, allChord: self.allChord, key: "Gb")
+                SignatureSelectionElement(chord: $chord, allChord: self.allChord, key: "G")
+                SignatureSelectionElement(chord: $chord, allChord: self.allChord, key: "Ab")
+            }
+            .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+            HStack {
+                SignatureSelectionElement(chord: $chord, allChord: self.allChord, key: "A")
+                SignatureSelectionElement(chord: $chord, allChord: self.allChord, key: "Bb")
+                SignatureSelectionElement(chord: $chord, allChord: self.allChord, key: "B")
+            }
+            .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
         }
     }
 }

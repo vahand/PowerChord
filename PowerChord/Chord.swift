@@ -30,6 +30,6 @@ func getChordFromKey(src: Array<Chord>, key: String) -> Chord? {
             return chord
         }
     }
-    print("getChordFromKey(): chord \(key) doesn't in given src chords list.")
+    print("getChordFromKey(): chord \(key) doesn't exist in given src chords list.")
     return nil
 }
