@@ -1,8 +1,10 @@
 # 🎵 PowerChord App
-This mobile application was developed using the **Swift language**, the **SwiftUI framework** and **Xcode** software.
+This mobile application was developed using the **Swift** language, **SwiftUI** framework and **Xcode** software.</br>
 The aim of this application is to describe musical scales and tonalities from a JSON file.
 
 ## Here some screenshots:
-<img width="377" alt="image" src="https://github.com/vahand/PowerChord/assets/97789425/8b08c5b3-c21e-421d-a785-000874c1dd88">
+![IMG_1247](https://github.com/vahand/PowerChord/assets/97789425/7abc7b75-8768-4395-abc8-1c355ef2f466)
+![IMG_1246](https://github.com/vahand/PowerChord/assets/97789425/def1fc96-7183-4daa-9d3f-5e6e51085437)
+https://github.com/vahand/PowerChord/assets/97789425/04a085f9-4cc1-4f78-a7b8-d5a88a94335b
 
 ## ⏳ Final version coming soon on the AppStore
