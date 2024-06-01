@@ -3,8 +3,8 @@ This mobile application was developed using the **Swift** language, **SwiftUI** 
 The aim of this application is to describe musical scales and tonalities from a JSON file.
 
 ## 📱 Here some screenshots:
-![IMG_1247](https://github.com/vahand/PowerChord/assets/97789425/7abc7b75-8768-4395-abc8-1c355ef2f466)
-![IMG_1246](https://github.com/vahand/PowerChord/assets/97789425/def1fc96-7183-4daa-9d3f-5e6e51085437)
+<img width="578" alt="image" src="https://github.com/vahand/PowerChord/assets/97789425/eef4db0a-ffa2-4676-9997-0d11184807c2">
+
 
 ## ⏳
 Final version coming soon on the AppStore.
