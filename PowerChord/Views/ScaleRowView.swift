@@ -1,5 +1,5 @@
 //
-//  ScaleDisplayingLine.swift
+//  ScaleRowView.swift
 //  PowerChord
 //
 //  Created by Vahan on 25/03/2024.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ScaleDisplayingLine: View {
+struct ScaleRowView: View {
     @Environment(\.colorScheme) var colorScheme
     
     let position: String
@@ -58,7 +58,7 @@ struct ScaleLine_Previews: PreviewProvider {
         let key = "A"
         let incrementation = "+1"
         let mainChord = true
-        ScaleDisplayingLine(position: position, key: key, incrementation: incrementation, mainChord: mainChord)
-        ScaleDisplayingLine(position: position, key: key, incrementation: incrementation, mainChord: mainChord)
+        ScaleRowView(position: position, key: key, incrementation: incrementation, mainChord: mainChord)
+        ScaleRowView(position: position, key: key, incrementation: incrementation, mainChord: mainChord)
     }
 }

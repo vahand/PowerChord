@@ -1,5 +1,5 @@
 //
-//  RectangleElement.swift
+//  KeyRectangleView.swift
 //  PowerChord
 //
 //  Created by Vahan on 23/03/2024.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct RectangleElement: View {
+struct KeyRectangleView: View {
     @Environment(\.colorScheme) var colorScheme
     
     let key: String
@@ -44,5 +44,5 @@ struct RectangleElement: View {
 }
 
 #Preview {
-    RectangleElement(key: "1", note: "A")
+    KeyRectangleView(key: "1", note: "A")
 }

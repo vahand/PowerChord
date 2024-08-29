@@ -1,5 +1,5 @@
 //
-//  MainRectangleElement.swift
+//  KeySelectionRectangleView.swift
 //  PowerChord
 //
 //  Created by Vahan on 23/03/2024.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MainRectangleElement: View {
+struct KeySelectionRectangleView: View {
     @Environment(\.colorScheme) var colorScheme
     
     let key: String
@@ -48,5 +48,5 @@ struct MainRectangleElement: View {
 }
 
 #Preview {
-    MainRectangleElement(key: "A")
+    KeySelectionRectangleView(key: "A")
 }

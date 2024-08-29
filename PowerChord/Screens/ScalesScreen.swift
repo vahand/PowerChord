@@ -1,5 +1,5 @@
 //
-//  Scales.swift
+//  ScalesScreen.swift
 //  PowerChord
 //
 //  Created by Vahan on 18/03/2024.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Scales: View {
+struct ScalesScreen: View {
     @Binding var chord: Chord
     @State var scaleType: String = "Scale"
     var allScaleTypes: [String] = ["Scale", "Pentatonic", "Blues"]
@@ -58,7 +58,7 @@ struct ScalesView_Preview: PreviewProvider {
         @State var chordA = Chord.init(id: 0, key: "C#", notes: ["A", "Bm", "C#m", "D", "E", "F#m", "G#dim"], majorScale: ["A", "B", "C#", "D", "E", "F#", "G#"], pentatonicScale: ["Db", "Eb", "F", "Ab", "Bb"], bluesScale: ["A", "B", "C", "Db", "E", "Gb"])
         let chordB = Chord.init(id: 1, key: "B", notes: ["B", "C#m", "D#m", "E", "F#", "G#m", "A#dim"], majorScale: ["A", "B", "C#", "D", "E", "F#", "G#"], pentatonicScale: ["B", "Db", "Eb", "Gb", "Ab"], bluesScale: ["A", "B", "C", "Db", "E", "Gb"])
         let chords = [chordA, chordB]
-        Scales(chord: $chordA, allChord: chords)
-        Scales(chord: $chordA, allChord: chords)
+        ScalesScreen(chord: $chordA, allChord: chords)
+        ScalesScreen(chord: $chordA, allChord: chords)
     }
 }

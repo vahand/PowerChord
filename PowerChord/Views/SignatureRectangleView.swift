@@ -1,5 +1,5 @@
 //
-//  Signature.swift
+//  SignatureRectangleView.swift
 //  PowerChord
 //
 //  Created by Vahan on 23/03/2024.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Signature: View {
+struct SignatureRectangleView: View {
     @Environment(\.colorScheme) var colorScheme
     
     let key: String
@@ -30,5 +30,5 @@ struct Signature: View {
 }
 
 #Preview {
-    Signature(key:"A")
+    SignatureRectangleView(key:"A")
 }

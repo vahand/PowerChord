@@ -1,5 +1,5 @@
 //
-//  ChoiceRectangle.swift
+//  HomeCategorieCellView.swift
 //  PowerChord
 //
 //  Created by Vahan on 18/03/2024.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ChoiceRectangle: View {
+struct HomeCategorieCellView: View {
     @Environment(\.colorScheme) var colorScheme
     
     let label: String
@@ -47,5 +47,5 @@ struct ChoiceRectangle: View {
 }
 
 #Preview {
-    ChoiceRectangle(label: "Test", image: "globe")
+    HomeCategorieCellView(label: "Test", image: "globe")
 }

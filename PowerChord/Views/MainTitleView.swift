@@ -1,5 +1,5 @@
 //
-//  MainTitle.swift
+//  MainTitleView.swift
 //  PowerChord
 //
 //  Created by Vahan on 18/03/2024.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MainTitle: View {
+struct MainTitleView: View {
     @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
@@ -34,5 +34,5 @@ struct MainTitle: View {
 }
 
 #Preview {
-    MainTitle()
+    MainTitleView()
 }

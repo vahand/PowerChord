@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ChordNumberSystem: View {
+struct ChordNumberSystemScreen: View {
     @Binding var chord: Chord
     
     private let allChord: Array<Chord>
@@ -60,8 +60,8 @@ struct ContentView_Previews: PreviewProvider {
         @State var chordA = Chord.init(id: 0, key: "A", notes: ["A", "Bm", "C#m", "D", "E", "F#m", "G#dim"], majorScale: ["A", "B", "C#", "D", "E", "F#", "G#"], pentatonicScale: ["A", "B", "Db", "E", "Gb"], bluesScale: ["A", "B", "C", "Db", "E", "Gb"])
         let chordB = Chord.init(id: 0, key: "B", notes: ["B", "C#m", "D#m", "E", "F#", "G#m", "A#dim"], majorScale: ["A", "B", "C#", "D", "E", "F#", "G#"], pentatonicScale: ["A", "B", "Db", "E", "Gb"], bluesScale: ["A", "B", "C", "Db", "E", "Gb"])
         let chords = [chordA, chordB]
-        ChordNumberSystem(chord: $chordA, allChord: chords)
-        ChordNumberSystem(chord: $chordA, allChord: chords)
+        ChordNumberSystemScreen(chord: $chordA, allChord: chords)
+        ChordNumberSystemScreen(chord: $chordA, allChord: chords)
     }
 }
 
