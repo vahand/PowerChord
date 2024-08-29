@@ -1,5 +1,5 @@
 //
-//  SignatureSelection.swift
+//  SignatureSelectionScreen.swift
 //  PowerChord
 //
 //  Created by Vahan on 27/05/2024.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SignatureSelectionElement: View {
+struct SignatureSelectionScreenElement: View {
     @Environment(\.presentationMode) var presentationMode
     
     @Binding var chord: Chord
@@ -34,7 +34,7 @@ struct SignatureSelectionElement: View {
     }
 }
 
-struct SignatureSelection: View {
+struct SignatureSelectionScreen: View {
     @Environment(\.colorScheme) var colorScheme
     @Binding var chord: Chord
     
@@ -53,38 +53,38 @@ struct SignatureSelection: View {
                 .kerning(1.2)
                 .padding(.bottom, 0.1)
             HStack {
-                SignatureSelectionElement(chord: $chord, allChord: self.allChord, key: "C")
-                SignatureSelectionElement(chord: $chord, allChord: self.allChord, key: "Db")
-                SignatureSelectionElement(chord: $chord, allChord: self.allChord, key: "D")
+                SignatureSelectionScreenElement(chord: $chord, allChord: self.allChord, key: "C")
+                SignatureSelectionScreenElement(chord: $chord, allChord: self.allChord, key: "Db")
+                SignatureSelectionScreenElement(chord: $chord, allChord: self.allChord, key: "D")
             }
             .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
             HStack {
-                SignatureSelectionElement(chord: $chord, allChord: self.allChord, key: "Eb")
-                SignatureSelectionElement(chord: $chord, allChord: self.allChord, key: "E")
-                SignatureSelectionElement(chord: $chord, allChord: self.allChord, key: "F")
+                SignatureSelectionScreenElement(chord: $chord, allChord: self.allChord, key: "Eb")
+                SignatureSelectionScreenElement(chord: $chord, allChord: self.allChord, key: "E")
+                SignatureSelectionScreenElement(chord: $chord, allChord: self.allChord, key: "F")
             }
             .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
             HStack {
-                SignatureSelectionElement(chord: $chord, allChord: self.allChord, key: "Gb")
-                SignatureSelectionElement(chord: $chord, allChord: self.allChord, key: "G")
-                SignatureSelectionElement(chord: $chord, allChord: self.allChord, key: "Ab")
+                SignatureSelectionScreenElement(chord: $chord, allChord: self.allChord, key: "Gb")
+                SignatureSelectionScreenElement(chord: $chord, allChord: self.allChord, key: "G")
+                SignatureSelectionScreenElement(chord: $chord, allChord: self.allChord, key: "Ab")
             }
             .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
             HStack {
-                SignatureSelectionElement(chord: $chord, allChord: self.allChord, key: "A")
-                SignatureSelectionElement(chord: $chord, allChord: self.allChord, key: "Bb")
-                SignatureSelectionElement(chord: $chord, allChord: self.allChord, key: "B")
+                SignatureSelectionScreenElement(chord: $chord, allChord: self.allChord, key: "A")
+                SignatureSelectionScreenElement(chord: $chord, allChord: self.allChord, key: "Bb")
+                SignatureSelectionScreenElement(chord: $chord, allChord: self.allChord, key: "B")
             }
             .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
         }
     }
 }
 
-struct SignatureSelection_Previews: PreviewProvider {
+struct SignatureSelectionScreen_Previews: PreviewProvider {
     static var previews: some View {
         @State var chordA = Chord.init(id: 0, key: "A", notes: ["A", "Bm", "C#m", "D", "E", "F#m", "G#dim"], majorScale: ["A", "B", "C#", "D", "E", "F#", "G#"], pentatonicScale: ["A", "B", "Db", "E", "Gb"], bluesScale: ["A", "B", "C", "Db", "E", "Gb"])
         let chordB = Chord.init(id: 0, key: "B", notes: ["B", "C#m", "D#m", "E", "F#", "G#m", "A#dim"], majorScale: ["A", "B", "C#", "D", "E", "F#", "G#"], pentatonicScale: ["A", "B", "Db", "E", "Gb"], bluesScale: ["A", "B", "C", "Db", "E", "Gb"])
         let chords = [chordA, chordB]
-        SignatureSelection(chord: $chordA, allChord: chords)
+        SignatureSelectionScreen(chord: $chordA, allChord: chords)
     }
 }

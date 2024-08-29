@@ -22,7 +22,7 @@ struct ScalesScreen: View {
     var body: some View {
         NavigationView {
             VStack {
-                TitleView(title: "SCALES")
+                ScreenTitleText(title: "SCALES")
                 HStack {
                     Menu {
                         Picker(selection: $chord, label: EmptyView()) {
@@ -31,7 +31,7 @@ struct ScalesScreen: View {
                             }
                         }
                     } label: {
-                        MainRectangleElement(key:self.chord.key)
+                        KeySelectionRectangleView(key:self.chord.key)
                             .padding(.trailing, 2)
                     }
                     
@@ -42,12 +42,12 @@ struct ScalesScreen: View {
                             }
                         }
                     } label: {
-                        ScaleTypeSelection(scaleType: self.scaleType)
+                        ScaleSelectionRectangleView(scaleType: self.scaleType)
                     }
                 }
                 .padding(.top, 25)
                 .padding(.bottom, 1)
-                ScaleDisplaying(chord: chord, scaleType: self.scaleType)
+                ScaleListView(chord: chord, scaleType: self.scaleType)
             }
         }
     }

@@ -1,5 +1,5 @@
 //
-//  ScaleTypeSelection.swift
+//  ScaleSelectionRectangleView.swift
 //  PowerChord
 //
 //  Created by Vahan on 07/04/2024.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ScaleTypeSelection: View {
+struct ScaleSelectionRectangleView: View {
     @Environment(\.colorScheme) var colorScheme
         
     let scaleType: String
@@ -37,5 +37,5 @@ struct ScaleTypeSelection: View {
 }
 
 #Preview {
-    ScaleTypeSelection(scaleType: "Major")
+    ScaleSelectionRectangleView(scaleType: "Major")
 }

@@ -1,5 +1,5 @@
 //
-//  Tips.swift
+//  TipsScreen.swift
 //  PowerChord
 //
 //  Created by Vahan on 18/03/2024.
@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct Tips: View {
+struct TipsScreen: View {
     var body: some View {
-        TitleView(title: "TIPS")
+        ScreenTitleText(title: "TipsScreen")
     }
 }
 
 #Preview {
-    Tips()
+    TipsScreen()
 }

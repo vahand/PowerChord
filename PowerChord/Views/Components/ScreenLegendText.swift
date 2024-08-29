@@ -1,5 +1,5 @@
 //
-//  LegendText.swift
+//  ScreenLegendText.swift
 //  PowerChord
 //
 //  Created by Vahan on 15/04/2024.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct LegendText: View {
+struct ScreenLegendText: View {
     @Environment(\.colorScheme) var colorScheme
     
     let legend: String
@@ -30,5 +30,5 @@ struct LegendText: View {
 }
 
 #Preview {
-    LegendText(legend: "by Vahan Ducher")
+    ScreenLegendText(legend: "by Vahan Ducher")
 }

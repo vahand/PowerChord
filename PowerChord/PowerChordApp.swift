@@ -11,7 +11,7 @@ import SwiftUI
 struct PowerChordApp: App {
     var body: some Scene {
         WindowGroup {
-            StartPage()
+            HomeScreen()
         }
     }
 }

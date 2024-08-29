@@ -30,21 +30,21 @@ struct ScaleListView: View {
     
     var body: some View {
         VStack {
-            ScaleListViewLine(position: "1st", key: chords[0], incrementation: "", mainChord: true)
-            ScaleListViewLine(position: "2nd", key: chords[1], incrementation: self.incrementation[0], mainChord: false)
-            ScaleListViewLine(position: "3rd", key: chords[2], incrementation: self.incrementation[1], mainChord: true)
-            ScaleListViewLine(position: (scaleType == "Pentatonic") ? "5th" : "4th", key: chords[3], incrementation: self.incrementation[2], mainChord: false)
-            ScaleListViewLine(position: (scaleType == "Pentatonic") ? "6th" : "5th", key: chords[4], incrementation: self.incrementation[3], mainChord: true)
+            ScaleRowView(position: "1st", key: chords[0], incrementation: "", mainChord: true)
+            ScaleRowView(position: "2nd", key: chords[1], incrementation: self.incrementation[0], mainChord: false)
+            ScaleRowView(position: "3rd", key: chords[2], incrementation: self.incrementation[1], mainChord: true)
+            ScaleRowView(position: (scaleType == "Pentatonic") ? "5th" : "4th", key: chords[3], incrementation: self.incrementation[2], mainChord: false)
+            ScaleRowView(position: (scaleType == "Pentatonic") ? "6th" : "5th", key: chords[4], incrementation: self.incrementation[3], mainChord: true)
             if (self.scaleType != "Pentatonic") {
-                ScaleListViewLine(position: "6th", key: chords[5], incrementation: self.incrementation[4], mainChord: false)
+                ScaleRowView(position: "6th", key: chords[5], incrementation: self.incrementation[4], mainChord: false)
                 if (self.scaleType != "Blues") {
-                    ScaleListViewLine(position: "7th", key: chords[6], incrementation: self.incrementation[5], mainChord: true)
+                    ScaleRowView(position: "7th", key: chords[6], incrementation: self.incrementation[5], mainChord: true)
                 } else {
-                    ScaleListViewLine(position: "", key: "", incrementation: "", mainChord: false)
+                    ScaleRowView(position: "", key: "", incrementation: "", mainChord: false)
                 }
             } else {
-                ScaleListViewLine(position: "", key: "", incrementation: "", mainChord: false)
-                ScaleListViewLine(position: "", key: "", incrementation: "", mainChord: false)
+                ScaleRowView(position: "", key: "", incrementation: "", mainChord: false)
+                ScaleRowView(position: "", key: "", incrementation: "", mainChord: false)
             }
         }
     }

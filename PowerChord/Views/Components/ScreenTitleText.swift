@@ -1,5 +1,5 @@
 //
-//  TitleView.swift
+//  ScreenTitleText.swift
 //  PowerChord
 //
 //  Created by Vahan on 18/03/2024.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TitleView: View {
+struct ScreenTitleText: View {
     @Environment(\.colorScheme) var colorScheme
     
     let title: String
@@ -26,5 +26,5 @@ struct TitleView: View {
 }
 
 #Preview {
-    TitleView(title: "PowerChord")
+    ScreenTitleText(title: "PowerChord")
 }

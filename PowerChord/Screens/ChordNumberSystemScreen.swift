@@ -1,5 +1,5 @@
 //
-//  ChordNumberSystem.swift
+//  ChordNumberSystemScreen.swift
 //  PowerChord
 //
 //  Created by Vahan on 18/03/2024.
@@ -20,7 +20,7 @@ struct ChordNumberSystemScreen: View {
     var body: some View {
         NavigationView {
             VStack {
-                TitleView(title: "CHORD\nNUMBER\nSYSTEM")
+                ScreenTitleText(title: "CHORD\nNUMBER\nSYSTEM")
                 HStack {
                     Menu {
                         Picker(selection: $chord, label: EmptyView()) {
@@ -29,27 +29,27 @@ struct ChordNumberSystemScreen: View {
                             }
                         }
                     } label: {
-                        MainRectangleElement(key:self.chord.key)
+                        KeySelectionRectangleView(key:self.chord.key)
                             .padding(.trailing, 20)
                     }
                     NavigationLink {
-                        SignatureSelection(chord: $chord, allChord: allChord)
+                        SignatureSelectionScreen(chord: $chord, allChord: allChord)
                     } label: {
-                        Signature(key: self.chord.key)
+                        SignatureRectangleView(key: self.chord.key)
                     }
                 }
                 .padding(20)
                 HStack {
-                    RectangleElement(key:"1", note: chord.notes[0])
-                    RectangleElement(key:"2(m)", note: chord.notes[1])
-                    RectangleElement(key:"3(m)", note: chord.notes[2])
+                    KeyRectangleView(key:"1", note: chord.notes[0])
+                    KeyRectangleView(key:"2(m)", note: chord.notes[1])
+                    KeyRectangleView(key:"3(m)", note: chord.notes[2])
                 }
                 HStack {
-                    RectangleElement(key:"4", note: chord.notes[3])
-                    RectangleElement(key:"5", note: chord.notes[4])
-                    RectangleElement(key:"6(m)", note: chord.notes[5])
+                    KeyRectangleView(key:"4", note: chord.notes[3])
+                    KeyRectangleView(key:"5", note: chord.notes[4])
+                    KeyRectangleView(key:"6(m)", note: chord.notes[5])
                 }
-                RectangleElement(key:"7(dim)", note: chord.notes[6])
+                KeyRectangleView(key:"7(dim)", note: chord.notes[6])
             }
         }
     }
